@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+/**{margin:0;padding:0}
+.box{width:200px;height:200px;border:5px solid #000;margin:100px auto;border-radius:50%;position:relative;}
+.box .cap{width:5px;height:5px;border-radius:50%;background:blue;position:absolute;-webkit-transform-origin:center 50%;left:50%;top:50%;z-index:2;margin-top:-5px; margin-left:-5px;}
+
+.box .hour{width:5px ;height:70px;background:#000;border-radius: 0 0 50% 50%;position:absolute;-webkit-transform-origin:center bottom;left:50%;top:100px;}
+
+.box .min{width:5px ;height:50px;background:pink;border-radius:0 0 50% 50% ;position:absolute;left:50%;top:50px;-webkit-transform-origin:center bottom;}
+
+.box .sec{width:5px ;height:90px;background:#60F;position:absolute;left:50%;top:100px;-webkit-transform-origin:center bottom;left:50%;top:30px;}*/
+
+*{margin:0;padding:0}
+.box{width:300px;height:300px;border:5px solid #000;margin:100px auto;border-radius:50%;position:relative;}
+.box .cap{width:10px;height:10px;border-radius:50%;background:blue;position:absolute;left:50%;top:50%;z-index:2;margin-top:-5px; margin-left:-5px;}
+.box .hour{width:8px ;height:80px;background:#000;border-radius:50% 50% 0 0;position:absolute;-webkit-transform-origin:center bottom;left:50%;top:70px;margin-left:-4px;}
+.box .min{width:6px;height:100px;background:pink;border-radius:50% 50% 0 0;position:absolute;left:50%;top:50px;-webkit-transform-origin:center bottom;margin-left:-2px;}
+.box .sec{width:4px;height:120px;background:#60F;border-radius:50% 50% 0 0;position:absolute;left:50%;top:100px;-webkit-transform-origin:center bottom;left:50%;top:30px;}
+.box span{width:4px;height:10px; background:#000;position:absolute;left:50%;margin-left:-2px; top:0; -webkit-transform-origin:center 150px;}
+.box span.bigScale{width:6px;margin-left:-3px;height:15px;}
+.box span strong{ position:absolute;top:18px;width:30px; left:50%;margin-left:-15px;text-align:center;}</style>
+<script>
+window.onload=function(){
+	var oBox=document.querySelector('.box');
+	var oH=document.querySelector('.hour');
+	var oM=document.querySelector('.min');
+	var oS=document.querySelector('.sec');
+	var N=60;
+	for(var i=0;i<N;i++){
+		var oSpan=document.createElement('span');
+		oSpan.style.WebkitTransform='rotate('+i*6+'deg)';
+		if(i%5==0){
+			oSpan.className='bigScale';
+			if(i/5==0){
+				oSpan.innerHTML='<strong>'+12+'<\/strong>';
+			}else{
+				oSpan.innerHTML='<strong>'+i/5+'<\/strong>';
+			}
+			var oStrong=oSpan.children[0];
+			oStrong.style.WebkitTransform='rotate('+-i*6+'deg)';
+		}
+		oBox.appendChild(oSpan);
+		
+	}
+	function time(){
+		var oDate = new Date();
+		var h = oDate.getHours();
+		var m = oDate.getMinutes();
+		var s = oDate.getSeconds();
+		var ms = oDate.getMilliseconds()
+		oH.style.WebkitTransform = 'rotate('+(h*30+(m/60*30))+'deg)';
+		oM.style.WebkitTransform = 'rotate('+(m*6+(s/60*6))+'deg)';
+		oS.style.WebkitTransform = 'rotate('+(s*6+(ms/1000*6))+'deg)';
+	};
+	time();
+	setInterval(time,1000);};
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="cap"></div>
+    <div class="hour"></div>
+    <div class="min"></div>
+    <div class="sec"></div>
+</div>
+</body>
+</html>
