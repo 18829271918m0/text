@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+	*{margin:0;padding:0;}
+	li{ list-style:none;}
+	#ul1 li{width:12.5%;height:100px; float:left; text-align:center; color:white; line-height:100px; font-size:50px;}
+	#ul1 li.w100{width:100%;}
+	#ul1 li.w50{width:50%;}
+	#ul1 li.w25{width:25%;}
+</style>
+<script>
+	window.onload = function(){
+		function rnd(m,n){
+			return parseInt(m+Math.random()*(n-m));
+		}	
+		var aLi = document.getElementsByTagName('li');
+		for(var i = 0;i<aLi.length;i++){
+			aLi[i].style.background = 'rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')';
+		}
+		
+		window.onresize = function(){
+			var cw = document.documentElement.clientWidth;
+			for(var i = 0;i<aLi.length;i++){
+				if(cw<480){
+					aLi[i].className = 'w100';
+				}else if(cw>480&&cw<768){
+					aLi[i].className = 'w50';
+				}else if(cw>768&&cw<1232){
+					aLi[i].className = 'w25';
+				}else{
+					aLi[i].className = '';
+				}
+			}
+		};
+	};
+</script>
+</head>
+<body>
+	<ul id="ul1">
+    	<li>1</li>
+    	<li>2</li>
+    	<li>3</li>
+    	<li>4</li>
+    	<li>5</li>
+    	<li>6</li>
+    	<li>7</li>
+    	<li>8</li>
+    </ul>
+</body>
+</html>
