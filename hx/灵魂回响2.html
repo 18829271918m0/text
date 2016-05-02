@@ -1,0 +1,706 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css">
+<style>
+body{background:#1c1a25 url(img/con_bg.jpg) no-repeat center 55px;}
+/*----head----*/
+.head{min-width:1000px;height:55px;background:#f6f6f6;background:url(img/a1.png) repeat-x;}
+.head .head_in{width:1000px;height:50px;margin:0 auto;}
+.head_in .logo{width:100px;height:50px;}
+.head_in .logo_l a{ text-indent:-9999em;display:block;width:99px;height:36px;background:url(img/changyou.png);margin-top:6px;border-right:1px solid #cecece;}
+.head_in .logo_r{width:531x;height:50px;}
+.head_in .cen{width:221px;height:50px;}
+.head_in .cen li{margin-top:11px;width:71px;}
+.head_in .cen li span{width:24px;height:24px;background:url(img/cyou_sprite.png) no-repeat -139px 0;margin-right:6px;}
+.head_in .cen li span:hover{transform:scale(2);} 
+.head_in .cen li a{line-height:24px;color:#333;font-size:12px;}
+.head_in .cen .money span{background-position:-189px 0px;}
+.head_in .cen .phone span{background-position:0 -104px;}
+.head_in .last{width:310px;height:50px;}
+.head_in .last li a{font-size:12px;color:#4a4a4a;line-height:50px;margin-left:29px;}
+.head_in .last li i{width:0;height:0;border:5px solid transparent;border-top:5px solid #676868;margin-top:23px;margin-left:6px;}
+.head_in .last li i:hover{transform:rotate(180deg);}
+.head_in .last .one{width:82px;height:50px;border-left:1px solid #e1e1e1;border-right:1px solid #e1e1e1;}
+.head_in .last .two{border-left:0px;border-right:1px solid #e1e1e1;width:112px;}
+.head_in .last .three{border-left:0px;border-right:1px solid #e1e1e1;width:112px;}
+.head em{background:url(img/head_line.png) repeat-x;height:5px;width:100%; display:block;}
+/*----con---*/
+.banner .banner_in{width:1000px;height:551px;margin:0 auto;background:url(img/header_main.jpg);position:relative;}
+.banner_in .banner_con .pic{width:190px;height:100px;}
+.banner_in .banner_con .banner_r{width:800px;height:110px;}
+.banner_in .banner_con .banner_r li{margin-right:28px;}
+.banner_in .banner_con .banner_r li a{margin-top:36px;color:#c9d5fd;font-size:16px;display:block;text-align:center;}
+.banner_in .banner_con .banner_r li .home{margin-top:6px;color:#8590bd;font-size:8px;}
+.banner_in .banner_con .banner_r .serive{margin-right:-45px;}
+.banner_in .banner_con .banner_r .frist{margin-left:45px;}
+.banner_in .good{width:32px;height:120px;background:red;font-size:20px;display:block;text-align:center;color:#fff;position:absolute;top:50%;left:0;}
+.con{width:1000px;margin:0 auto;}
+.con .down{width:1000px;height:414px;margin-bottom:18px;}
+.con .down .down_l{width:618px;height:414px;}
+.con .down .down_l .down_t{width:617px;height:109px;background:url(img/sprite.jpg) no-repeat 0 0;}
+.con .down .down_l .down_t a{float:left;width:100px;height:110px;}
+.con .down .down_l .down_t .game{width:215px;height:108px;}
+.con .down .down_l .down_t .game:hover{ background:url(img/sprite.jpg) 0 -110px;}
+.con .down .down_l .down_t .zhang:hover{ background:url(img/sprite.jpg) -217px -110px;}
+.con .down .down_l .down_t .chong:hover{background:url(img/sprite.jpg) -317px -110px;}
+.con .down .down_l .down_t .dui:hover{background:url(img/sprite.jpg) -417px -110px;}
+.con .down .down_l .down_t .hand:hover{background:url(img/sprite.jpg) -517px -110px;}
+.con .down .down_l .down_b{position:relative;}
+.con .down .down_l .down_b a{display:none;}
+.con .down .down_l .down_b a img{width:615px;height:330px;}
+.con .down .down_l .down_b .play{display:block;}
+.con .down .down_l .down_b .dian i:hover{transform:scale(1.5);}
+.con .down .down_l .down_b .play{width:615px;height:330px;display:block;border:1px solid #443b4f;border-top:0;}
+.con .down .down_l .down_b .dian{width:100px;height:14px;display:block; position:absolute;bottom:10px;right:8px;}
+.con .down .down_l .down_b .dian i{width:14px;height:14px;background:#3a3e47;border-radius:50%;display:block;float:left;margin-right:4px;}
+.con .down .down_l .down_b .dian .cur{background:red;}
+.con .down .down_r{height:414px;}
+.down_r .down_r_t{background:url(img/sever.png);width:355px;height:55px;margin-left:17px;margin-top:6px;}
+.down_r_t .yi{margin-left:80px;padding-top:11px;}
+.down_r_t .yi p{font-size:12px;color:#adb9e0;margin-left:5px;}
+.down_r_t .yi b{font-size:12px;color:#f00000;margin-left:13px;margin-right:7px;}
+.down_r_t .er{padding-top:5px;}
+.down_r .down_r_b{width:381px;height:346px;}
+.down_r_b .down_r_b_t{width:381px;height:42px;background:#2c303b;margin-top:4px;}
+.down_r_b_t .update p{font-size:12px;color:#adb9e0;line-height:42px;margin-left:5px;}
+.down_r_b_t .update a{color:#f93d1a; text-decoration:underline;}
+.down_r_b_t .update i{width:14px;height:14px;background:url(img/sprite.jpg) no-repeat -603px -227px;display:block;margin-top:15px;margin-left:5px;}
+.down_r_b_t .follow{margin-left:30px;line-height:42px;}
+.down_r_b_t .follow span{font-size:12px;color:#adb9e0;}
+.down_r_b_t .follow a{background:url(img/sprite.jpg);margin-top:11px;}
+.down_r_b_t .follow .mes{width:26px;height:21px;background-position:-248px -230px;margin-left:18px;margin-right:10px;}
+.down_r_b_t .follow .xin{width:27px;height:22px;background-position:-295px -230px;margin-left:10px; margin-right:12px;}
+.down_r_b_t .follow .num{width:22px;height:22px;background-position:-344px -230px;margin-left:10px;}
+.down_r_b .down_r_b_b{background:#322e3f;border:1px solid #433b4f;}
+.down_r_b_b .tit{width:381px;height:57px;background:url(img/a.png) no-repeat -263px -295px;}
+.down_r_b_b .tit a{float:left;width:93px;height:55px;line-height:55px;color:#fdf4e0;font-size:12px;text-align:center;}
+.down_r_b_b .tit .new{height:56px;width:95px;line-height:56px;text-align:center;}
+.down_r_b_b .tit_b{margin:12px 16px;}
+.down_r_b_b .tit_b li{height:32px;line-height:32px;color:#9ca7ca;font-size:12px;text-align:center;margin-bottom:0;}
+.down_r_b_b .tit_b li .shen{margin-left:7px;}
+.down_r_b_b .tit_b li .new{margin-left:9px;}
+.tit_b .date{height:35px;background:url(img/sprite.jpg) no-repeat 0px -378px;margin-bottom:5px;}
+.tit_b .date p{font-size:15px;color:#ff4606;line-height:35px;text-align:center;}
+.picture{width:1000px;height:195px;background:#1d1b26;}
+.picture ul{padding-top:32px;}
+.picture ul li{width:242px;height:130px;border:1px solid #433b4f;margin-right:8px;float:left;}
+.picture ul .last{margin-right:0px;}
+.picture ul li:hover{transform:skew(20deg,200deg);}
+.menu{width:997px;height:346px;background:#1b1924;}
+.menu .menu_l{width:660px;height:344px;border:1px solid #433b4f;}
+.menu_l .menu_l_t{height:58px;background:url(img/sprite.jpg) no-repeat 0 -414px;}
+.menu_l .menu_l_t a{width:110px;height:56px;float:left;}
+.menu_l .menu_l_t .sh:hover{background:url(img/sprite.jpg) 0 -473px;}
+.menu_l .menu_l_t .shensheshou:hover{background:url(img/sprite.jpg) -110px -473px;}
+.menu_l .menu_l_t .shouhuzhe:hover{background:url(img/sprite.jpg) -220px -473px;}
+.menu_l .menu_l_t .mofashi:hover{background:url(img/sprite.jpg) -330px -473px;}
+.menu_l .menu_l_t .zhanshi:hover{background:url(img/sprite.jpg) -440px -473px;}
+.menu_l .menu_l_t .cike:hover{background:url(img/sprite.jpg) -550px -473px;}
+.menu_l_t .b{background-position:-110px -412px;}
+.menu_l .menu_l_b a{display:block;}
+.menu .menu_r{width:319px;height:346px;}
+.menu_r .menu_r_t{height:45px;}
+.menu_r_t a{display:block;}
+.menu_r_t a i{width:27px;height:28px;background:url(img/sprite.jpg) no-repeat -630px -2px;}
+.menu_r_t a i:hover{transform:scale(2);}
+.menu_r_t a p{font-size:18px;color:#f3ca90;line-height:28px;margin-left:15px;font-weight:bold;}
+.menu_r .menu_r_c{height:149px;border:1px solid #433b4f;position:relative;}
+.menu_r_c .nvshen{width:319px;height:36px;position:absolute;bottom:0px;left:0;}
+.menu_r_c .nv{width:319px;height:36px;background:#000;position:absolute;bottom:0px;left:0;opacity:0.3;}
+.menu_r_c .nvshen b{font-size:12px;color:#fff;line-height:36px;margin-left:5px;}
+.menu_r .menu_r_b{width:319px;height:141px;margin-top:10px;}
+.menu_r .menu_r_b li{width:319px;height:25px;margin-bottom:3px;background:url(img/sprite.jpg) no-repeat 0 -528px;}
+.menu_r .menu_r_b li p{font-size:12px;color:#a6b2d8;margin-left:27px;line-height:25px;}
+.menu_r .menu_r_b li i{font-style:normal;font-size:12px;color:#a6b2d8;line-height:25px;margin-right:11px;}
+.con .end{width:1000px;height:758px;margin-top:30px;}
+.con .end .end_l{margin-right:20px;}
+.con .end .end_l .end_l_t{width:214px;height:187px;background:url(img/sprite.jpg) no-repeat 0 -557px; }
+.end_l .end_l_t p{font-size:15px;color:#f3ca90;line-height:43px;text-align:center;}
+.end_l .end_l_t ul{margin-top:15px;margin-left:24px;}
+.end_l .end_l_t ul li{width:94px;height:28px;}
+.end_l .end_l_t ul li em{width:2px;height:2px;background:#9587ab;margin-top:13px;margin-right:2px;}
+.end_l .end_l_t ul li span{font-size:12px;color:#9587ab;line-height:28px;}
+.end_l .end_l_c{width:215px;height:262px;margin-top:24px;}
+.end_l .end_l_c a{display:block;}
+.end_l .end_l_c a span{width:205px;height:36px;background:url(img/sprite.jpg) no-repeat -451px -273px;display:block;border:5px solid #322b3c;}
+.end_l .end_l_c a span p{font-size:14px;color:#a295b7;line-height:36px;text-align:center;}
+.end_l_b{overflow:hidden; width:215px; height:268px; background:url(img/examen.jpg); display:block; }
+.end_l_b img{transition:all 0.4s ease-in;}
+.end_l_b img:hover{ transform:translate(-215px,0);}
+.end .play_u{width:422px;margin-right:20px;height:734px;}
+.con .end .end_c{width:422px;background:#1b1a20;height:351px;}
+.con .end .end_c .end_c_t{height:31px;margin-bottom:10px;}
+.end_c .end_c_t i{width:36px;height:25px;background:url(img/sprite.jpg) no-repeat -612px -352px;margin-top:2px;}
+.end_c .end_c_t p{font-size:17px;color:#f3ca90;line-height:31px;margin-left:9px;}
+.end_c .list{width:420px;height:301px;border:1px solid #433b4f;}
+.end_c .list span{height:46px;line-height:46px;display:block;}
+.end_c .list span a{width:104px;text-align:center;height:44px;border-right:1px solid #433b4f;color:#a295b7;border-bottom:1px solid #433b4f;}
+.end_c .list span .more{border-right:none;}
+.end_c .list span .active{background:#322b3c;color:#fff;border-bottom:none;}
+.end_c .list .list_b .list_b_l a{border:1px solid #433b4f;margin:24px 14px 0 15px;display:block;}
+.list_b_r {margin-top:21px;}
+.list_b_r p{height:26px;line-height:26px;}
+.list_b_r p i{width:2px;height:2px;background:#9587ab;margin-top:10px;margin-right:2px;}
+.list_b_r p .sheng{font-size:12px; color:#9587ab;font-weight:normal;}
+.end .bot{margin-top:40px;}
+.end .end_r{width:322px;height:734px;}
+.end .end_r .end_top{width:322px;height:345px;}
+.end_r .end_r_t{width:322px;height:41px;}
+.end_r_t i{width:23px;height:26px;background:url(img/sprite.jpg) no-repeat -631px -42px;margin-right:18px; transition:all 0.3s ease-in-out;}
+.end_r_t i:hover{ transform:rotate(360deg) scale(2);}
+.end_r_t h2{font-size:18px;color:#f3ca90;margin-top:6px;}
+.end_r .end_r_b{width:320px;height:303px;border:1px solid #4b3f5c;}
+.end_r_b ul{margin:0 17px;width:286px;height:235px;}
+.end_r_b ul li{height:58px;width:286px;border-bottom:1px dotted #594f67;}
+.end_r_b ul li .xin{width:78px;height:26px;background:url(img/a.png) no-repeat -5px -554px;margin-top:16px; }
+.end_r_b ul li .xin b{font-size:12px; color:#fff;line-height:26px;font-weight:normal;margin-left:7px;}
+.end_r_b ul li .data{margin-left:20px;margin-top:23px;}
+.end_r_b ul li .data a{font-size:12px ;color:#9587ab;line-height:15px;height:15px;width:58px;}
+.end_r_b .last{width:279px;height:39px;border:3px solid #4b3f5c;background:#26212d;margin-top:5px;display:block;margin-left:17px;}
+.end_r_b .last a{font-size:20px;color:#b1a1ca;text-align:center;line-height:39px;display:block;}
+.end_r .end_bottom{margin-top:39px;}
+.end_r .end_bottom .end_bottom_t{width:322px;height:46px;}
+.end_bottom_t i{width:29px;height:28px;background:url(img/sprite.jpg) no-repeat -625px -80px;margin-right:12px; transition:all 0.3s ease-in-out;}
+.end_bottom_t i:hover{ transform:rotate(360deg) scale(2);}
+.end_bottom_t h3{font-size:20px;color:#f3ca90;padding-top:5px;}
+.end_bottom_b{border:1px solid #433b4f;height:304px;background:#322b3c;}
+.end_bottom_b a{display:block;width:320px;height:46px;background:#1d1a23;border:1px solid #433b4f;}
+.end_bottom_b a span{width:104px;height:46px;text-align:center;line-height:46px;border-right:1px solid #433b4f;}
+.end_bottom_b a .moer{border-right:none;}
+.end_bottom_b .video{width:296px;height:226px;margin-left:11px;}
+.end_bottom_b .video a{width:137px;height:90px;background:url(img/v.jpg);float:left;}
+.end_bottom_b .video a:hover{transform:scale(1.5);}
+.end_bottom_b .video .on{margin-right:18px;}
+.end_bottom_b .video .off{margin-bottom:23px;margin-top:23px;}
+</style>
+<script>
+window.onload=function(){
+		var oImg=document.getElementById('picture');
+		var aImga=oImg.getElementsByTagName('a');
+		var aImgbtn=oImg.getElementsByTagName('i');
+		for(var i=0;i<aImgbtn.length;i++){
+			aImgbtn[i].index=i;
+			aImgbtn[i].onmouseover=function(){
+				for(var i=0;i<aImgbtn.length;i++){
+					aImgbtn[i].className='';
+					aImga[i].className='';	
+				}
+				this.className='cur';
+				aImga[this.index].className='play';	
+			}	
+		}	
+}
+</script>
+</head>
+
+<body>
+	<!--head-->
+	<div class="head">
+    	<div class="head_in clear">
+        	<div class="logo clear fl">
+                <h1 class="logo_l fl clear">
+                    <a href="#" class="fl">畅游</a>
+                </h1>
+           	</div>            
+            <ul class="fr clear last">
+            	<li class="one fl clear">
+                	<a href="#" class="fl">客服</a>
+                    <i class="fl"></i>
+                </li>
+                <li class="one fl clear two">
+                	<a href="#" class="fl">畅游全服务</a>
+                    <i class="fl"></i>
+                </li>
+                <li class="one fl clear two three">
+                	<a href="#" class="fl">畅游全服务</a>
+                    <i class="fl"></i>                    
+                </li>
+            </ul>
+            <ul class="fr clear cen">
+                <li class="fl">
+                   <span class="fl"></span>
+                    <a href="#" class="fl">注册</a>
+                </li>
+                <li class="fl money">
+                   <span class="fl"></span>
+                    <a href="#" class="fl">充值</a>
+                </li>
+                <li class="fl phone">
+                   <span class="fl"></span>
+                    <a href="#" class="fl">畅游+</a>
+                </li>
+            </ul>                        
+        </div>
+        <em> </em>             
+    </div>
+    <!--banner-->
+    <div class="banner">
+    	<div class="banner_in clear">
+        	<div class="banner_con">                
+               <a href="#" class="fl pic"><img src="img/logo.gif"/></a>                         	
+                <ul class="banner_r fl clear">
+                    <li class="fl frist">
+                        <a href="#">首页</a>
+                        <a href="#" class="home">HOME</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">新闻公告</a>
+                        <a href="#" class="home">New</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">游戏特色</a>
+                        <a href="#" class="home">FEAURES</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">新手指南</a>
+                        <a href="#" class="home">NEWBIE</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">游戏下载</a>
+                        <a href="#" class="home">DOWNLOAD</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">活动专区</a>
+                        <a href="#" class="home">ACTIVE</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">视觉欣赏</a>
+                        <a href="#" class="home">VIDEO & PICTURE</a>
+                     </li>
+                    <li class="fl">
+                        <a href="#">玩家互动</a>
+                        <a href="#" class="home">INTERACTION</a>
+                     </li>
+                    <li class="fl serive">
+                        <a href="#">客户服务</a>
+                        <a href="#" class="home">SERIVE</a>
+                     </li>
+                </ul>
+           	</div>           	
+            <a href="#" class="good">点我赢好礼</a>      
+        </div>               
+    </div>
+    <!--con-->
+    <div class="con">
+    	<!--down-->
+    	<div class="down clear">
+        	<div class="down_l fl">
+            	<div class="down_t clear">
+                	<a href="#" class="game"></a>
+                    <a href="#" class="zhang"></a>
+                    <a href="#" class="chong"></a>
+                    <a href="#" class="dui"></a>
+                    <a href="#" class="hand"></a>
+                </div>
+                <div class="down_b" id="picture">
+                	<a href="#" class="play"><img src="img/main_a1 (1).jpg"/></a>
+                    <a href="#"><img src="img/1 (2).jpg"></a>
+                    <a href="#"><img src="img/2.jpg"></a>
+                    <a href="#"><img src="img/3.jpg"></a>
+                    <a href="#"><img src="img/4.jpg"></a>
+                    <span class="dian">
+                    	<i class="cur"></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>                  
+                </div>
+            </div>
+            <div class="down_r fr">
+            	<div class="down_r_t">
+                	<div class="yi clear">
+                    	<p class="fl">电信一区</p>
+                        <b class="fl">【元素殿堂】</b>
+                        <p class="fl">欢迎进驻</p>
+                    </div>
+                    <div class="yi clear er">
+                    	<p class="fl">电信二区</p>
+                        <b class="fl">【元素殿堂】</b>
+                        <p class="fl">欢迎进驻</p>
+                    </div>
+                </div>
+                <div class="down_r_b">
+                	<div class="down_r_b_t">
+                    	<div class="update fl clear">
+                    		<p class="fl">拒您上次访问有<a href="#">200</a>条更新</p>
+                        	<i class="fl"></i>
+                        </div>
+                        <div class="follow fl">
+                        	<span class="fl">关注:</span>
+                            <a href="#" class="fl mes"></a>                            
+                            <a href="#" class="fl xin"></a>
+                            <a href="#" class="fl num"></a>
+                        </div>
+                    </div>
+                    <div class="down_r_b_b">
+                    	<div class="tit clear">
+                            <a href="#">综合</a>
+                            <a href="#" class="new">新闻</a>
+                            <a href="#">公告</a>
+                            <a href="#">媒体</a>
+                        </div>
+                        <ul class="tit_b">
+                           <li class="date">
+                           	   <p>4月8日大版开启 新职业术上士魔神天降</p>	
+                           </li>
+                           <li class="clear">
+                           		<a href="#" class="fl new">【新闻】</a>
+                                <a href="#" class="fl shen">天降神魔新职业术上士魔神天降</a>
+                                <a href="#" class="fr">03/24</a>
+                           </li>
+                           <li class="clear">
+                           		<a href="#" class="fl new">【新闻】</a>
+                                <a href="#" class="fl shen">天降神魔新职业术上士魔神天降</a>
+                                <a href="#" class="fr">03/24</a>
+                           </li>
+                           <li class="clear">
+                           		<a href="#" class="fl new">【新闻】</a>
+                                <a href="#" class="fl shen">天降神魔新职业术上士魔神天降</a>
+                                <a href="#" class="fr">03/24</a>
+                           </li>
+                           <li class="clear">
+                           		<a href="#" class="fl new">【新闻】</a>
+                                <a href="#" class="fl shen">天降神魔新职业术上士魔神天降</a>
+                                <a href="#" class="fr">03/24</a>
+                           </li>
+                           <li class="clear">
+                           		<a href="#" class="fl new">【新闻】</a>
+                                <a href="#" class="fl shen">天降神魔新职业术上士魔神天降</a>
+                                <a href="#" class="fr">03/24</a>
+                           </li>
+                           <li class="clear">
+                           		<a href="#" class="fl new">【新闻】</a>
+                                <a href="#" class="fl shen">天降神魔新职业术上士魔神天降</a>
+                                <a href="#" class="fr">03/24</a>
+                           </li>
+                           <li class="clear last">
+                           		<a href="#" class="fr more">更多信息&gt;</a>
+                           </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <!--picture-->
+        <div class="picture">
+        	<ul class="clear">
+            	<li>
+                	<a href="#"><img src="img/main_a2.jpg"/></a>
+                </li>
+                <li>
+                	<a href="#"><img src="img/main_a2.jpg"/></a>
+                </li>
+                <li>
+                	<a href="#"><img src="img/main_a2.jpg"/></a>
+                </li>
+                <li class="last">
+                	<a href="#"><img src="img/main_a2.jpg"/></a>
+                </li>
+            </ul>
+        </div>
+        <!--menu-->
+        <div class="menu clear">
+        	<div class="menu_l fl">
+            	<div class="menu_l_t clear">
+                	<a href="#" class="sh"></a>
+                    <a href="#" class="b shensheshou"></a>
+                    <a href="#" class="b shouhuzhe"></a>
+                    <a href="#" class="b mofashi"></a>
+                    <a href="#" class="zhanshi"></a>
+                    <a href="#" class="c cike"></a>
+                </div>
+                <div class="menu_l_b">
+                	<a href="#"><img src="img/cike.jpg"/></a>
+                </div>
+            </div>
+            <div class="menu_r fr">
+            	<div class="menu_r_t">
+                	<a href="#" class="clear">
+                    	<i class="fl"></i>
+                        <p class="fl">活动中心</p>
+                    </a>
+                </div>
+                <div class="menu_r_c">
+                	<a href="#" class="clear">
+                    	<img src="img/1.jpg"/>
+                    </a>
+                    <div class="nvshen clear">                  
+                         <span class="nv fl"></span>
+                         <b class="fl">女武神的秘密</b>                          
+                   </div>                  
+                </div>
+                <ul class="menu_r_b">
+                	<li class="clear">
+                    	<p class="fl">神谕者的成长礼</p>
+                        <i class="fr">进行中</i>
+                    </li>
+                    <li class="clear">
+                    	<p class="fl">神谕者的成长礼</p>
+                        <i class="fr">进行中</i>
+                    </li>
+                    <li class="clear">
+                    	<p class="fl">神谕者的成长礼</p>
+                        <i class="fr">进行中</i>
+                    </li>
+                    <li class="clear">
+                    	<p class="fl">神谕者的成长礼</p>
+                        <i class="fr">进行中</i>
+                    </li>
+                    <li class="clear">
+                    	<p class="fl">神谕者的成长礼</p>
+                        <i class="fr">进行中</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--end-->
+        <div class="end clear">
+        	<div class="end_l fl">
+            	<div class="end_l_t">
+                	<p>快捷入口</p>
+                    <ul class="clear">
+                    	<li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                        <li class="fl clear">
+                        	<em class="fl"></em>
+                            <span class="fl">账号管理</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="end_l_c">
+                	<a href="#">
+                    	<img src="img/main_a3_3.jpg"/>
+                        <span>
+                        	<p>媒体合作专区</p>
+                        </span>
+                    </a>
+                </div>
+                <div class="end_l_b">
+            		<img src="img/examen.jpg" />
+                </div>
+            </div>
+<!--			<div class="tuzi2">
+            	<img src="img/examen.jpg" />
+            </div> -->    
+                   
+            <div class="play_u fl">
+            <div class="end_c fl">
+            	<div class="end_c_t clear">
+                    <i class="fl"></i>
+                    <p class="fl">玩家交流</p>
+                </div>
+                <div class="list">
+                	<span class="clear">
+                    	<a href="#" class="fl active">玩家攻略</a>
+                        <a href="#" class="fl">论坛热帖</a>
+                        <a href="#" class="fl">社区精华</a>
+                        <a href="#" class="fl more">更多信息</a>
+                    </span>
+                    <div class="list_b clear">
+                    	<div class="list_b_l fl ">
+                            <a href="#">
+                                <img src="img/1031.jpg"/>
+                            </a>
+                        </div>
+                        <div class="list_b_r fl">
+                        	<p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="end_c fl bot">
+            	<div class="end_c_t clear">
+                    <i class="fl"></i>
+                    <p class="fl">玩家交流</p>
+                </div>
+                <div class="list">
+                	<span class="clear">
+                    	<a href="#" class="fl active">玩家攻略</a>
+                        <a href="#" class="fl">论坛热帖</a>
+                        <a href="#" class="fl">社区精华</a>
+                        <a href="#" class="fl more">更多信息</a>
+                    </span>
+                    <div class="list_b clear">
+                    	<div class="list_b_l fl ">
+                            <a href="#">
+                                <img src="img/1031.jpg"/>
+                            </a>
+                        </div>
+                        <div class="list_b_r fl">
+                        	<p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                            <p class="clear">
+                            	<i class="fl"></i>
+                                <b class="fl sheng">生活技能之烹饪技能详细解读</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+            <div class="end_r fr">
+            	<div class="end_top">
+                    <div class="end_r_t clear">
+                        <i class="fl"></i>
+                        <h2 class="fl">游戏资料</h2>
+                    </div>
+                    <div class="end_r_b">
+                        <ul>
+                            <li class="clear">
+                                <span class="fl xin">
+                                    <b>新手入门</b>
+                                </span>
+                                <span class="fl clear data">
+                                    <a href="#" class="fl">注册账号</a>
+                                    <a href="#" class="fl">下载游戏</a>
+                                    <a href="#" class="fl">登录游戏</a>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <span class="fl xin">
+                                    <b>新手入门</b>
+                                </span>
+                                <span class="fl clear data">
+                                    <a href="#" class="fl">注册账号</a>
+                                    <a href="#" class="fl">下载游戏</a>
+                                    <a href="#" class="fl">登录游戏</a>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <span class="fl xin">
+                                    <b>新手入门</b>
+                                </span>
+                                <span class="fl clear data">
+                                    <a href="#" class="fl">注册账号</a>
+                                    <a href="#" class="fl">下载游戏</a>
+                                    <a href="#" class="fl">登录游戏</a>
+                                </span>
+                            </li>
+                            <li class="clear">
+                                <span class="fl xin">
+                                    <b>新手入门</b>
+                                </span>
+                                <span class="fl clear data">
+                                    <a href="#" class="fl">注册账号</a>
+                                    <a href="#" class="fl">下载游戏</a>
+                                    <a href="#" class="fl">登录游戏</a>
+                                </span>
+                            </li>
+                        </ul>
+                        <span class="last">
+                            <a href="#">进入资料站</a>
+                        </span>
+                    </div>
+                 </div>
+                <div class="end_bottom">
+                	<div class="end_bottom_t clear">
+                    	<i class="fl"></i>
+                        <h3 class="fl">视觉欣赏</h3>
+                    </div>
+                    <div class="end_bottom_b">
+                    	<a href="#" class="clear" id="over">
+                        	<span class="fl">游戏视频</span>
+                            <span class="fl">游戏截图</span>
+                            <span class="fl moer">更多信息&gt;</span>
+                            
+                        </a>
+                        <div class="video clear">
+                        	<a href="#" class="on off"></a>
+                            <a href="#" class="off"></a>
+                            <a href="#" class="on"></a>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
