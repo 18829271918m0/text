@@ -1,0 +1,1424 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/base.css" />
+<style>
+/*head*/
+.head{ min-width:1200px; height:39px; background:#f5f5f5; border-bottom:1px solid #999;}
+.head_in{ width:1200px; margin:0 auto;}
+.nav .icon{ width:18px; height:18px; background:url(img/sprite1.png); margin-right:3px;}
+.nav a{ padding:0 15px; border-right:1px dotted #999; height:18px; line-height:18px; margin-top:10px;}
+.nav .weixin{ background:url(img/weixin.png);}
+.nav .qq{ background-position:-189px -21px;}
+.nav .car{ background-position:0 -163px;}
+.nav .phone{ background-position:-171px -45px; margin-right:0;}
+.nav .order{ background-position:-223px -45px;}
+.nav .shopnum{ padding:0 7px; height:15px; line-height:15px; background:#999; font-style:normal; color:#fff; border-radius:7px; margin-top:1px; margin-left:7px;}
+.nav .last{ padding-right:0; border:none;}
+/*logo,search*/
+.top{ width:1200px; margin:0 auto; height:66px;}
+.logo{ width:106px; height:36px; background:red; margin-top:15px;}
+.logo a{ width:100%; height:100%; background:url(img/logo.png); display:block; text-indent:-999em;}
+.top .search{ margin-top:17px; margin-left:254px;}
+/*subnav*/
+.subnav{ min-width:1200px; height:40px; background:#ff6599;}
+.subnav_in{ width:1074px; margin:0 auto; padding-left:126px;}
+.subnav_in a{ float:left; font-size:14px; color:#fff; font-weight:bold;line-height:40px; padding:0 15px;}
+.cur,.subnav_in a:hover{ background:#ed3577;}
+.subnav .downmenu{ position:relative; padding-right:24px;}
+.subnav .arrow{ position:absolute; width:0; height:0; border:4px solid transparent; border-top:4px solid #fff; top:19px; right:13px;}
+/*banner*/
+.banner{ background: url(img/index.jpg) repeat-x top center; height:574px;}
+.banner_in{ width:1200px; margin:0 auto; position:relative; }
+.menu{ width: 198px; height:572px; border:1px solid #999; background:#fff; padding:0 20px;}
+.menu li{ height:115px; border-bottom:1px dotted #999; position:relative;}
+.menu .last{ border-bottom:none;}
+.menu h2{ background:url(img/hot.png) no-repeat 2px center; padding-left:23px; height:42px; line-height:42px; font-size:16px; color:#f69;}
+.menu .clothes{ background: url(img/clothes.png) no-repeat left center;}
+.menu a{ line-height:12px; margin-bottom:12px; margin-right:15px;}
+.menu .hot{ color:#f69;}
+.menu .arrow{ position:absolute; top:50px; right:-4px;}
+.banner_r{ width:200px; height:419px; }
+.banner_r a{ border-bottom:1px solid #999; display:block;}
+.banner_r .last{ border-bottom:none;}
+.banner_b{ width:958px; height:154px;  position:absolute; bottom:0; left:240px; border-top:1px solid #999; padding-left:2px;}
+.banner_b a{ margin-top:10px; border:1px solid #999; margin-left:10px;}
+/*con*/
+.con{ width:1200px; margin:0 auto;}
+.con_t{ height:52px;}
+.con_t .tit{ background:url(img/sprite2.png) no-repeat; width:157px; height:25px; margin-top:20px; }
+.con_t .tuangou{ background-position:0 -240px;}
+.con_t .clothes{ background-position:0 -44px; width:77px;}
+.con_t .zazhi{ background-position: 0 -201px;}
+.con_t .daynew{ height:16px; line-height:16px; border-left:1px dotted #999; padding-left:9px; margin-left:10px; margin-top:25px; font-size:14px; color:#999; font-weight:normal;}
+.con_t .daynew b{ margin:0 6px; color:#666;}
+.con_t .allclothes{ font-size:14px; color:#999; margin-top:20px; font-weight:normal;}
+.con_t_txt a{ float:left; padding:0 14px 0 17px; font-size:14px; border-right:1px dotted #999; line-height:16px; font-weight:normal; color:#999; margin-top:21px;}
+.con_t_txt .last{ padding-right:0; border-right:none;}
+.con .list_wrap{ overflow:hidden;}
+.con .list_box{ border-top:1px solid #999; padding-top:15px; margin-right:-24px;}
+.con_list{ width:180px; margin-right:24px; margin-bottom:10px;}
+.con_list a{ display:block;}
+.con_list .name{ line-height:18px; margin-top:6px;}
+.con_list div{ margin-top:3px; margin-bottom:6px;}
+.con_list .moneynew{ color:#f69; font-size:16px;}
+.con_list .moneyold{ text-decoration:line-through;}
+.con_list .sellnum{ border-top:1px dotted #999; line-height:32px;}
+.ad{ margin:21px auto 0; width:1200px; display:block;}
+.list_img{ height:611px; border-bottom:1px solid #999; border-top:1px solid #999; }
+.aside_imgl{ width:940px; }
+.opa_box{ margin-top:20px;}
+.opa_list{ width:180px; height:254px; position:relative;margin-right:5px; margin-bottom:5px;}
+.opa_list p{ position:absolute; bottom:0; left:0; width:100%; height:34px; background:url(img/bar_bg.png); text-align:center; line-height:34px; font-size:14px; color:#fff; }
+.txt_list{ width: 312px; height:44px; border-right:1px dotted #999; margin-top:18px;}
+.txt_list .txt_tit{ width:40px;  line-height:44px; padding-left:12px; color:#f69; font-size:16px;}
+.con_txt .last{ border-right:none;}
+.txt_list div{ width:250px;}
+.txt_list div a{ float:left; line-height:22px; margin-right:10px;}
+.aside_imgr{ width:239px;  border-left:1px solid #999; padding-left:20px; height:611px;}
+.aside_imgr h3{ height:38px; }
+.aside_imgr h3 span{ font-size:16px;margin-top:18px;}
+.aside_imgr h3 a{ font-size:14px;margin-top:20px; color:#999; font-weight:normal;}
+.aside_imgr li{ height:48px; border-bottom:1px dotted #999; padding-top:14px;}
+.aside_imgr li a{ border:1px solid #999;}
+.aside_imgr li div{ margin-left:12px;}
+.aside_imgr .name{ margin-bottom:8px;}
+.aside_imgr .num{ color:#999;}
+.aside_imgr .last{ border-bottom:none;}
+.magazine_box{ overflow:hidden;}
+.magazine{ margin-right:-15px;}
+.magazine li{ width:200px; height:283px; border:1px solid #999; padding:0 13px; margin-right:15px;}
+.magazine li p{ line-height:37px; font-weight:bold;  font-size:14px;}
+.magazine li .img{ display:block;}
+.magazine li span{ margin-top:17px;}
+.magazine .look{ margin-top:13px; background:#f69; color:#fff; border-radius:3px; width:64px; height:20px; line-height:20px; text-align:center;}
+/*foot*/ 
+.foot{ min-width:1200px; background:#f5f5f5; border-top:1px solid #999; padding-top:30px; margin-top:20px; }
+.foot_in{ width:1200px; margin:0 auto; padding-bottom:20px;}
+.foot_top{ height:180px;}
+.kefu{ width:240px; }
+.kefu_phone{ width:35px; height:35px; background:url(img/kefu.png); margin-right:13px;}
+.phone_p{ font-size:20px; font-weight:bold;}
+.kefurexian{ font-size:14px; line-height:36px;}
+.user{ width:123px;}
+.user p{ font-size:16px; font-weight:bold; margin-bottom:12px;}
+.user a{ line-height:26px; display:block;}
+.aboutus i{ width:16px; height:16px; background:url(img/sprite1.png) no-repeat 0 -21px; float:left; margin-top:4px; margin-right:3px;}
+.qr_code img{ margin-top:19px;}
+.downapp{ width:132px;}
+.friendlink{ border-top:1px solid #999; border-bottom:1px solid #999; line-height:30px;}
+.copyright{ margin-top:14px; margin-bottom:8px;}
+</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="head">
+    	<div class="head_in clear">
+        	<div class="nav fr clear">
+            	<a href="#" class="clear fl">
+                	<span class="icon fl weixin"></span>
+                    <span class="fl">微信登录</span>
+                </a>
+            	<a href="#" class="clear fl">
+                	<span class="icon fl qq"></span>
+                    <span class="fl">QQ登录</span>
+                </a>
+            	<a href="#" class="clear fl">
+                    <span class="fl">登录</span>
+                </a> 
+            	<a href="#" class="clear fl">
+                    <span class="fl">注册</span>
+                </a>
+            	<a href="#" class="clear fl">
+                	<span class="icon fl car"></span>
+                    <span class="fl">我的购物车</span>
+                    <i class="fl shopnum">12</i>
+                </a>
+            	<a href="#" class="clear fl">
+                	<span class="icon fl order"></span>
+                    <span class="fl">我的订单</span>
+                </a>
+            	<a href="#" class="clear fl">
+                	<span class="icon fl phone"></span>
+                    <span class="fl">下载APP</span>
+                </a>
+            	<a href="#" class="clear fl last">
+                    <span class="fl">客户服务</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--logo,search-->
+    <div class="top clear">
+    	<h1 class="fl logo">
+        	<a href="http://www.meilishuo.com/">美丽说</a>
+        </h1>
+        <img class="fl search" src="img/search.png" />
+    </div>
+    <!--subnav-->
+    <div class="subnav">
+    	<div class="subnav_in">
+        	<a href="#" class="cur">首页</a>
+        	<a href="#">今日最热</a>
+        	<a href="#" class="downmenu">衣服
+            	<i class="arrow"></i>
+            </a>
+        	<a href="#">鞋子</a>
+        	<a href="#">靴子</a>
+        	<a href="#">包包</a>
+        	<a href="#">团购</a>
+        	<a href="#">首页</a>
+        	<a href="#">首页</a>
+        	<a href="#" class="downmenu">爱美丽Club
+            	<i class="arrow"></i>
+            </a>
+        </div>
+    </div>
+    <!--banner-->
+    <div class="banner">
+    	<div class="banner_in clear">
+        	<ul class="menu fl">
+            	<li>
+                	<h2>最热</h2>
+                    <p>
+                    	<a class="fl">冬季新品</a>
+                    	<a class="fl hot">毛衣</a>
+                    	<a class="fl">活力运动鞋</a>
+                    	<a class="fl">连衣裙</a>
+                    	<a class="fl hot">新款靴子</a>
+                    	<a class="fl">单肩包</a>
+                    	<a class="fl">暖冬美裤</a>
+                    	<a class="fl">外套</a>
+                    	<a class="fl hot">入冬打底裤</a>
+                    </p>
+                    <span class="arrow">&gt;</span>
+                </li>
+            	<li>
+                	<h2 class="clothes">衣服</h2>
+                    <p>
+                    	<a class="fl">冬季新品</a>
+                    	<a class="fl hot">毛衣</a>
+                    	<a class="fl">活力运动鞋</a>
+                    	<a class="fl">连衣裙</a>
+                    	<a class="fl hot">新款靴子</a>
+                    	<a class="fl">单肩包</a>
+                    	<a class="fl">暖冬美裤</a>
+                    	<a class="fl">外套</a>
+                    	<a class="fl hot">入冬打底裤</a>
+                    </p>
+                    <span class="arrow">&gt;</span>
+                </li>
+            	<li>
+                	<h2>最热</h2>
+                    <p>
+                    	<a class="fl">冬季新品</a>
+                    	<a class="fl hot">毛衣</a>
+                    	<a class="fl">活力运动鞋</a>
+                    	<a class="fl">连衣裙</a>
+                    	<a class="fl hot">新款靴子</a>
+                    	<a class="fl">单肩包</a>
+                    	<a class="fl">暖冬美裤</a>
+                    	<a class="fl">外套</a>
+                    	<a class="fl hot">入冬打底裤</a>
+                    </p>
+                    <span class="arrow">&gt;</span>
+                </li>
+            	<li>
+                	<h2>最热</h2>
+                    <p>
+                    	<a class="fl">冬季新品</a>
+                    	<a class="fl hot">毛衣</a>
+                    	<a class="fl">活力运动鞋</a>
+                    	<a class="fl">连衣裙</a>
+                    	<a class="fl hot">新款靴子</a>
+                    	<a class="fl">单肩包</a>
+                    	<a class="fl">暖冬美裤</a>
+                    	<a class="fl">外套</a>
+                    	<a class="fl hot">入冬打底裤</a>
+                    </p>
+                    <span class="arrow">&gt;</span>
+                </li>
+            	<li class="last">
+                	<h2>最热</h2>
+                    <p>
+                    	<a class="fl">冬季新品</a>
+                    	<a class="fl hot">毛衣</a>
+                    	<a class="fl">活力运动鞋</a>
+                    	<a class="fl">连衣裙</a>
+                    	<a class="fl hot">新款靴子</a>
+                    	<a class="fl">单肩包</a>
+                    	<a class="fl">暖冬美裤</a>
+                    	<a class="fl">外套</a>
+                    	<a class="fl hot">入冬打底裤</a>
+                    </p>
+                    <span class="arrow">&gt;</span>
+                </li>
+            </ul>
+            <div class="fr banner_r">
+            	<a href="#">
+                	<img src="img/img1.jpg" />
+                </a>
+            	<a href="#">
+                	<img src="img/img1.jpg" />
+                </a>
+            	<a href="#" class="last">
+                	<img src="img/img1.jpg" />
+                </a>
+            </div>
+            <div class="banner_b clear">
+            	<a href="#" class="fl">
+                	<img src="img/img2.jpg" />
+                </a>
+            	<a href="#" class="fl">
+                	<img src="img/img2.jpg" />
+                </a>
+            	<a href="#" class="fl">
+                	<img src="img/img2.jpg" />
+                </a>
+            	<a href="#" class="fl">
+                	<img src="img/img2.jpg" />
+                </a>
+            	<a href="#" class="fl">
+                	<img src="img/img3.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--con-->
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl"></span>
+        </h3>
+        <div class="list_wrap">
+        	<ul class="clear list_box">
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl tuangou"></span>
+            <span class="daynew fl">今日上新<b>4098</b>件</span>
+            <a href="#" class="fr allclothes">查看所有衣服&nbsp;&gt;</a>
+        </h3>
+        <div class="list_wrap">
+        	<ul class="clear list_box">
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        	<li class="fl con_list">
+            	<a href="#">
+                	<img src="img/list_img.jpg" />
+                </a>
+                <p class="name">人手一支的入门款隔离！Za 新能真皙美白隔离霜35g</p>
+                <div>
+                	<span class="moneynew">¥54.80</span>
+                    <span class="moneyold">¥78.00</span>
+                </div>
+                <p class="sellnum">13439人已购买</p>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <a href="#" class="ad"><img src="img/ad.png" /></a>
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl clothes"></span>
+            <span class="daynew fl">今日上新<b>4098</b>件</span>
+            <a href="#" class="fr allclothes">查看所有衣服&nbsp;&gt;</a>
+        </h3>
+        <div class="list_img clear">
+        	<div class="fl aside_imgl">
+            	<ul class="opa_box clear">
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                </ul>
+                <ul class="con_txt clear">
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list last">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        	<div class="fl aside_imgr">
+            	<h3 class="clear">
+                	<span class="fl">最热衣服好店</span>
+                    <a href="#" class="fr">更多好店&nbsp;&gt;</a>
+                </h3>
+                <ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl clothes"></span>
+            <span class="daynew fl">今日上新<b>4098</b>件</span>
+            <a href="#" class="fr allclothes">查看所有衣服&nbsp;&gt;</a>
+        </h3>
+        <div class="list_img clear">
+        	<div class="fl aside_imgl">
+            	<ul class="opa_box clear">
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                </ul>
+                <ul class="con_txt clear">
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list last">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        	<div class="fl aside_imgr">
+            	<h3 class="clear">
+                	<span class="fl">最热衣服好店</span>
+                    <a href="#" class="fr">更多好店&nbsp;&gt;</a>
+                </h3>
+                <ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl clothes"></span>
+            <span class="daynew fl">今日上新<b>4098</b>件</span>
+            <a href="#" class="fr allclothes">查看所有衣服&nbsp;&gt;</a>
+        </h3>
+        <div class="list_img clear">
+        	<div class="fl aside_imgl">
+            	<ul class="opa_box clear">
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                </ul>
+                <ul class="con_txt clear">
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list last">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        	<div class="fl aside_imgr">
+            	<h3 class="clear">
+                	<span class="fl">最热衣服好店</span>
+                    <a href="#" class="fr">更多好店&nbsp;&gt;</a>
+                </h3>
+                <ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl clothes"></span>
+            <span class="daynew fl">今日上新<b>4098</b>件</span>
+            <a href="#" class="fr allclothes">查看所有衣服&nbsp;&gt;</a>
+        </h3>
+        <div class="list_img clear">
+        	<div class="fl aside_imgl">
+            	<ul class="opa_box clear">
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                	<li class="opa_list fl">
+                    	<a href="#">
+                        	<img src="img/opa_img.jpg" />
+                        </a>
+                        <p>连衣裙半身裙</p>
+                    </li>
+                </ul>
+                <ul class="con_txt clear">
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                	<li class="fl txt_list last">
+                    	<a class="fl txt_tit" href="#">裙子</a>
+                        <div class="fl">
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">半身</a>
+                        	<a href="#">裙长袖</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">连衣裙</a>
+                        	<a href="#">秋冬</a>
+                        	<a href="#">美裙最</a>
+                        	<a href="#">受欢迎</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        	<div class="fl aside_imgr">
+            	<h3 class="clear">
+                	<span class="fl">最热衣服好店</span>
+                    <a href="#" class="fr">更多好店&nbsp;&gt;</a>
+                </h3>
+                <ul>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li>
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                	<li class="last">
+                    	<a href="#" class="fl"><img src="img/img4.png" /></a>
+                        <div class="fl">
+                        	<p class="name">原木家</p>
+							<p class="num">121件商品/总销量33114</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="con">
+    	<h3 class="con_t">
+        	<span class="tit fl zazhi"></span>
+            <p class="clear fr con_t_txt">
+            	<a href="#">欧美</a>
+            	<a href="#">甜美</a>
+            	<a href="#">复古</a>
+            	<a href="#">个性</a>
+            	<a href="#">日系</a>
+            	<a href="#">其他</a>
+            	<a href="#" class="last">更多杂志&nbsp;&gt;</a>
+            </p>
+        </h3>
+        <div class="magazine_box">
+            <ul class="magazine">
+                <li class="fl">
+                    <p>每个人有它的脾气</p>
+                    <a href="#" class="img"><img src="img/magazine.jpg" /></a>
+                    <div class="clear">
+                        <span class="fl">889个分享</span>
+                        <a class="fr look">去看看</a>
+                    </div>
+                </li>
+                <li class="fl">
+                    <p>每个人有它的脾气</p>
+                    <a href="#" class="img"><img src="img/magazine.jpg" /></a>
+                    <div class="clear">
+                        <span class="fl">889个分享</span>
+                        <a class="fr look">去看看</a>
+                    </div>
+                </li>
+                <li class="fl">
+                    <p>每个人有它的脾气</p>
+                    <a href="#" class="img"><img src="img/magazine.jpg" /></a>
+                    <div class="clear">
+                        <span class="fl">889个分享</span>
+                        <a class="fr look">去看看</a>
+                    </div>
+                </li>
+                <li class="fl">
+                    <p>每个人有它的脾气</p>
+                    <a href="#" class="img"><img src="img/magazine.jpg" /></a>
+                    <div class="clear">
+                        <span class="fl">889个分享</span>
+                        <a class="fr look">去看看</a>
+                    </div>
+                </li>
+                <li class="fl">
+                    <p>每个人有它的脾气</p>
+                    <a href="#" class="img"><img src="img/magazine.jpg" /></a>
+                    <div class="clear">
+                        <span class="fl">889个分享</span>
+                        <a class="fr look">去看看</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    <!--foot-->
+    <div class="foot">
+    	<div class="foot_in">
+        	<div class="foot_top clear">
+            	<div class="kefu fl">
+                	<span class="kefu_phone fl"></span>				<div class="fl">
+                    	<p class="phone_p">4000-800-577</p>
+                        <p class="kefurexian">美丽说客服热线</p>
+                        <p class="time">周一至周日：08:00-22:00</p>
+                    </div>
+                </div>
+                <div class="user fl">
+                	<p>用户帮忙</p>
+                    <a href="#">新手指南</a>
+                    <a href="#">新手指南</a>
+                    <a href="#">新手指南</a>
+                </div>
+                <div class="user fl">
+                	<p>用户帮忙</p>
+                    <a href="#">新手指南</a>
+                    <a href="#">新手指南</a>
+                    <a href="#">新手指南</a>
+                    <a href="#">新手指南</a>
+                    <a href="#">新手指南</a>
+                </div>
+                <div class="user aboutus fl">
+                	<p>用户帮忙</p>
+                    <a href="#"><i></i>新手指南</a>
+                    <a href="#"><i></i>新手指南</a>
+                    <a href="#"><i></i>新手指南</a>
+                </div>
+                <div class="user qr_code fl">
+                	<p>用户帮忙</p>
+                    <img src="img/img5.png" />
+                </div>
+                <div class="user downapp fr">
+                	<p>用户帮忙</p>
+                    <img src="img/img6.png" />
+                </div>
+            </div>
+            <p class="friendlink">
+            	<span>友情链接：</span>
+            	<a href="#">腾讯女</a>
+            	<a href="#">列表网</a>
+            	<a href="#">太平洋</a>
+            	<a href="#">网女性</a>
+            	<a href="#">装网</a>
+            	<a href="#">美网</a>
+            	<a href="#">牌服优</a>
+                <a href="#" class="fr">更多&gt;&gt;</a>
+            </p>
+            <p class="copyright">Copyright ©2014 Meilishuo.com  电信与信息服务业务经营许可证100798号  企业法人营业执照  京ICP备11031139号  京公网安备110108006045 </p>
+            <p class="kefuemail">客服邮箱：kf@meilishuo.com  客服电话：4000-800-577  文明办网文明上网举报电话：010-82615762  违法不良信息举报中心 我最喜爱的人民警察评选>></p>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
