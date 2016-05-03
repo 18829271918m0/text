@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+#div1 {width:300px; height:300px; background:#eee; border:1px solid black; margin:10px auto; border-radius:50%; position:relative; box-shadow:inset 2px 2px 5px #666;}
+#div1 span.hour {position:absolute; width:14px; height:60px; background:black; left:50%; margin-left:-7px; top:90px; -webkit-transform-origin:center bottom;}
+#div1 span.min {position:absolute; width:6px; height:100px; background:black; left:50%; margin-left:-3px; top:50px; -webkit-transform-origin:center bottom;}
+#div1 span.sec {position:absolute; width:2px; height:120px; background:black; left:50%; margin-left:-1px; top:30px; -webkit-transform-origin:center bottom;}
+#div1 span.cap {position:absolute; width:20px; height:20px; background:#333; left:50%; top:50%; margin-left:-10px; margin-top:-10px; border-radius:50%;}
+#div1 span.scaler {position:absolute; width:2px; height:6px; background:black; left:50%; margin-left:-1px; top:0; -webkit-transform-origin:center 150px;}
+#div1 span.big_scaler {position:absolute; width:4px; height:14px; background:black; left:50%; margin-left:-2px; top:0; -webkit-transform-origin:center 150px;}
+
+#div1 span.big_scaler em {font-style:normal; position:absolute; top:14px; width:100px; left:50%; margin-left:-50px; text-align:center;}

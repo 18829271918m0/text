@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0}
+.box{width:300px;height:300px;position:relative;top:0;left:0;-webkit-transform-style:preserve-3d;margin:100px auto;-webkit-transform:perspective(800px) rotateY(0deg) rotateX(0deg);-webkit-transition:1s all ease;}
+
+.box div{width:100%;height:100%;position:absolute;top:0;left:0;text-align:center; line-height:200px;font-size:20px; opacity:0.8}
+.box .front{background:red;-webkit-transform:translateZ(150px);}
+.box .back{background:pink;-webkit-transform:translateZ(-150px);}
+.box .left{ background:#FF0;-webkit-transform: translate(-150px,0) rotateY(-90deg);}
+.box .right{ background:#0C3;-webkit-transform: translate(150px,0) rotateY(90deg);}
+.box .top{ background:#C39; -webkit-transform: translate(0,-150px) rotateX(90deg);}
+.box .bottom{ background:#0F0;-webkit-transform: translate(0,150px) rotateX(-90deg);}
+.box:active{-webkit-transform:perspective(800px) rotateY(180deg)  rotateX(180deg);}
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="front">正面</div>
+    <div class="back">反面</div>
+    <div class="left">左面</div>
+    <div class="right">右面</div>
+    <div class="top">顶部</div>
+    <div class="bottom">底部</div>
+</div>
+</body>
+</html>

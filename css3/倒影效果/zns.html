@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+* {margin:0; padding:0; list-style:none;}
+
+body {background:black;}
+
+.reflector {width:300px; height:300px; background:url(b1.png) no-repeat; position:relative;}
+.reflector span {width:300px; height:300px; background:-webkit-linear-gradient(rgba(0,0,0,1) 40%, rgba(0,0,0,0)), url(b1.png) no-repeat; position:absolute; left:0; top:308px; -webkit-transform:scale(1,-1); opacity:0.5;}
+
+#ul1 {}
+#ul1 li {float:left; padding:10px;}
+</style>
+<script>
+function setStyle(obj, json)
+{
+	for(var i in json)
+	{
+		obj.style[i]=json[i];
+	}
+}
+
+window.onload=function ()
+{
+	var oUl=document.getElementById('ul1');
+	var aLi=oUl.children;
+	var aImg=document.querySelectorAll('#ul1 img');
+	
+	oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';
+	
+	for(var i=0;i<aImg.length;i++)
+	{
+		var src=aImg[i].src;
+		var oDiv=document.createElement('div');
+		oDiv.className='reflector';
+		
+		oDiv.innerHTML='<span></span>';
+		
+		setStyle(oDiv, {
+			width:		aImg[i].offsetWidth+'px',
+			height:		aImg[i].offsetHeight+'px',
+			background:	'url('+src+') no-repeat'
+		});
+		
+		setStyle(oDiv.children[0], {
+			width:			aImg[i].offsetWidth+'px',
+			height:			aImg[i].offsetHeight+'px',
+			background:		'-webkit-linear-gradient(rgba(0,0,0,1) 40%, rgba(0,0,0,0)), url('+src+') no-repeat',
+			top:			(aImg[i].offsetHeight+8)+'px'
+		});
+		
+		//oDiv.style.cssText='width:'+aImg[i].offsetWidth+'px;height:'+aImg[i].offsetHeight+'px;background:url('+src+') no-repeat;';
+		//oDiv.children[0].style.cssText='width:'+aImg[i].offsetWidth+'px;height:'+aImg[i].offsetHeight+'px; background:-webkit-linear-gradient(rgba(0,0,0,1) 40%, rgba(0,0,0,0)), url('+src+') no-repeat;top:'+(aImg[i].offsetHeight+8)+'px';
+		
+		aImg[i].parentNode.appendChild(oDiv);
+		aImg[i].style.display='none';
+	}
+};
+</script>
+</head>
+
+<body>
+<ul id="ul1">
+    <li><img src="img/m1.jpg" /></li>
+    <li><img src="img/m2.jpg" /></li>
+    <li><img src="img/m3.jpg" /></li>
+    <li><img src="img/m4.jpg" /></li>
+    <li><img src="img/m5.jpg" /></li>
+    <li><img src="img/m6.jpg" /></li>
+</ul>
+</body>
+</html>
